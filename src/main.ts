@@ -73,8 +73,8 @@ button?.addEventListener("click", () => {
   game_info.style.display = "none";
 });
 
-const music = document.getElementById("music") as HTMLAudioElement;
-music.loop = true;
+// const music = document.getElementById("music") as HTMLAudioElement;
+// music.loop = true;
 
 export const obstacleArrayLevel1: Array<Obstacle> = [];
 export const obstacleArrayLevel2: Array<Obstacle> = [];
@@ -227,12 +227,11 @@ const launchpad = new Launchpad(
 );
 
 /**
- * The gameLoop function clears the canvas, plays music, and progresses through different levels of a
+ * The gameLoop function clears the canvas and progresses through different levels of a
  * game based on completion status.
  */
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  music.play();
   if (currentLevel === 1) {
     let is1Complete = level1();
     if (is1Complete) {
